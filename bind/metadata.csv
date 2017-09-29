@@ -1,1 +1,4 @@
 metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
+bind.queries.in,count,,request,Queries recieved by BIND server,0,bind,queries in
+bind.queries.out,count,,response,Queries responded to by BIND server,0,bind,queries out
+

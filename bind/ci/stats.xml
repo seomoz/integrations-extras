@@ -553,7 +553,7 @@
         </queries-in>
         <nsstat>
           <name>Requestv4</name>
-          <counter>4292054577</counter>
+          <counter>4292054587</counter>
         </nsstat>
         <nsstat>
           <name>Requestv6</name>
