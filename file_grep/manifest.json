@@ -1,0 +1,12 @@
+{
+  "maintainer": "help@datadoghq.com",
+  "manifest_version": "0.1.0",
+  "max_agent_version": "6.0.0",
+  "min_agent_version": "5.6.3",
+  "name": "file_grep",
+  "short_description": "file_grep description.",
+  "guid": "9f4d34cd-fbe6-412c-8767-09299fc7f6b9",
+  "support": "contrib",
+  "supported_os": ["linux","mac_os","windows"],
+  "version": "0.1.0"
+}
