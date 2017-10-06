@@ -29,6 +29,8 @@ class FileGrepCheck(AgentCheck):
 
         try:
             with ctx_fd(filename) as fd:
+                size = os.fstat(fd).st_size
+                self.gauge('file_grep.size', size, tags=['file:{}'.format(filename)])
                 with ctx_mmap(fd) as mm:
                     result = mm.find(search_str)
         except Exception as e:
