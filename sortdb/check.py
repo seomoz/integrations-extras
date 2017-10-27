@@ -109,16 +109,15 @@ class SortdbCheck(AgentCheck):
         if all([o.hostname, o.port]):
             instance_tags = ["sortdb_instance:{0}-{1}".format(o.hostname, o.port)]
 
-        # get and set metrics
-        self._get_sortdb_metrics(sortdb_url, SORTDB_METRICS, instance_tags)
-
         #service check
         self.service_check(SORTDB_SERVICE_CHECK,
             AgentCheck.OK,
             tags=instance_tags,
-            message='Connection to %s was successful' % sortdb_url)   
-        
-        
+            message='Connection to %s was successful' % sortdb_url) 
+
+        # get and set metrics
+        self._get_sortdb_metrics(sortdb_url, SORTDB_METRICS, instance_tags)
+               
 
     def _get_response_from_url(self, url, timeout, aggregation_key, instance_tags):
         '''
