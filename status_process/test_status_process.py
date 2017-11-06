@@ -19,15 +19,19 @@ MOCK_CONFIG = {
     'init_config': {},
     'instances' : [{
         'check_name': 'true.passes',
-        'command': '/bin/true'
+        'command': 'true'
     }, {
         'check_name': 'false.fails',
-        'command': '/bin/false'
+        'command': 'false'
     }, {
         'check_name': 'false.passes.with.rc1',
-        'command': '/bin/false',
+        'command': 'false',
         'return_codes': [0, 1]
-    }]
+    }, {
+        'check_name': 'false.timeout',
+        'command': '/bin/sleep 10'
+    }
+    ]
 }
 
 MOCK_AGENT_CONFIG = merge_dicts(AgentCheckTest.DEFAULT_AGENT_CONFIG, {
@@ -53,5 +57,6 @@ class TestStatusProcess(AgentCheckTest):
                                   tags=['check_name:false.fails'])
         self.assertServiceCheckOK('status_process.ok',
                                   tags=['check_name:false.passes.with.rc1'])
-
+        self.assertServiceCheckWarning('status_process.ok',
+                                  tags=['check_name:false.timeout', 'timeout'])
         self.coverage_report()

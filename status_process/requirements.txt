@@ -1,1 +1,2 @@
 # integration pip requirements
+subprocess32==3.2.7
