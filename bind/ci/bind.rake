@@ -14,6 +14,14 @@ namespace :ci do
 
     task :install do
       Rake::Task['ci:common:install'].invoke('bind')
+      
+      # Use the Python Virtual Environment and install packages.
+      use_venv = in_venv
+      install_requirements('bind/requirements.txt',
+                           "--cache-dir #{ENV['PIP_CACHE']}",
+                           "#{ENV['VOLATILE_DIR']}/ci.log",
+                           use_venv)
+     
       # sample docker usage
       # sh %(docker create -p XXX:YYY --name bind source/bind:bind_version)
       # sh %(docker start bind)

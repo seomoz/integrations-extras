@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/bind9.xsl"?>
+<statistics version="3.6">
+  <server>
+    <boot-time>2017-10-27T17:19:42Z</boot-time>
+    <config-time>2017-10-27T17:19:42Z</config-time>
+    <current-time>2017-11-16T21:03:37Z</current-time>
+    <counters type="opcode">
+      <counter name="QUERY">2994352</counter>
+      <counter name="IQUERY">0</counter>
+      <counter name="STATUS">0</counter>
+      <counter name="RESERVED3">0</counter>
+      <counter name="NOTIFY">2272</counter>
+      <counter name="UPDATE">0</counter>
+      <counter name="RESERVED6">0</counter>
+      <counter name="RESERVED7">0</counter>
+      <counter name="RESERVED8">0</counter>
+      <counter name="RESERVED9">0</counter>
+      <counter name="RESERVED10">0</counter>
+      <counter name="RESERVED11">0</counter>
+      <counter name="RESERVED12">0</counter>
+      <counter name="RESERVED13">0</counter>
+      <counter name="RESERVED14">0</counter>
+      <counter name="RESERVED15">0</counter>
+    </counters>
+    <counters type="qtype">
+      <counter name="SOA">2994353</counter>
+    </counters>
+    <counters type="nsstat">
+      <counter name="Requestv4">2996624</counter>
+      <counter name="Requestv6">0</counter>
+      <counter name="ReqEdns0">0</counter>
+      <counter name="ReqBadEDNSVer">0</counter>
+      <counter name="ReqTSIG">0</counter>
+      <counter name="ReqSIG0">0</counter>
+      <counter name="ReqBadSIG">0</counter>
+      <counter name="ReqTCP">11608</counter>
+      <counter name="AuthQryRej">0</counter>
+      <counter name="RecQryRej">0</counter>
+      <counter name="XfrRej">0</counter>
+      <counter name="UpdateRej">0</counter>
+      <counter name="Response">2996624</counter>
+      <counter name="TruncatedResp">11606</counter>
+      <counter name="RespEDNS0">0</counter>
+      <counter name="RespTSIG">0</counter>
+      <counter name="RespSIG0">0</counter>
+      <counter name="QrySuccess">2994352</counter>
+      <counter name="QryAuthAns">2994351</counter>
+      <counter name="QryNoauthAns">0</counter>
+      <counter name="QryReferral">0</counter>
+      <counter name="QryNxrrset">0</counter>
+      <counter name="QrySERVFAIL">0</counter>
+      <counter name="QryFORMERR">0</counter>
+      <counter name="QryNXDOMAIN">0</counter>
+      <counter name="QryRecursion">0</counter>
+      <counter name="QryDuplicate">0</counter>
+      <counter name="QryDropped">0</counter>
+      <counter name="QryFailure">0</counter>
+      <counter name="XfrReqDone">0</counter>
+      <counter name="UpdateReqFwd">0</counter>
+      <counter name="UpdateRespFwd">0</counter>
+      <counter name="UpdateFwdFail">0</counter>
+      <counter name="UpdateDone">0</counter>
+      <counter name="UpdateFail">0</counter>
+      <counter name="UpdateBadPrereq">0</counter>
+      <counter name="RecursClients">0</counter>
+      <counter name="DNS64">0</counter>
+      <counter name="RateDropped">0</counter>
+      <counter name="RateSlipped">0</counter>
+      <counter name="RPZRewrites">0</counter>
+      <counter name="QryUDP">2982744</counter>
+      <counter name="QryTCP">11606</counter>
+      <counter name="NSIDOpt">0</counter>
+      <counter name="ExpireOpt">0</counter>
+      <counter name="OtherOpt">0</counter>
+      <counter name="SitOpt">0</counter>
+      <counter name="SitNew">0</counter>
+      <counter name="SitBadSize">0</counter>
+      <counter name="SitBadTime">0</counter>
+      <counter name="SitNoMatch">0</counter>
+      <counter name="SitMatch">0</counter>
+    </counters>
+    <counters type="zonestat">
+      <counter name="NotifyOutv4">0</counter>
+      <counter name="NotifyOutv6">0</counter>
+      <counter name="NotifyInv4">2272</counter>
+      <counter name="NotifyInv6">0</counter>
+      <counter name="NotifyRej">0</counter>
+      <counter name="SOAOutv4">95234</counter>
+      <counter name="SOAOutv6">0</counter>
+      <counter name="AXFRReqv4">374</counter>
+      <counter name="AXFRReqv6">0</counter>
+      <counter name="IXFRReqv4">563</counter>
+      <counter name="IXFRReqv6">0</counter>
+      <counter name="XfrSuccess">937</counter>
+      <counter name="XfrFail">0</counter>
+    </counters>
+    <counters type="resstat" />
+    <counters type="sockstat">
+      <counter name="UDP4Open">95001</counter>
+      <counter name="UDP6Open">73</counter>
+      <counter name="TCP4Open">1044</counter>
+      <counter name="TCP6Open">2</counter>
+      <counter name="UnixOpen">0</counter>
+      <counter name="RawOpen">1</counter>
+      <counter name="UDP4OpenFail">0</counter>
+      <counter name="UDP6OpenFail">0</counter>
+      <counter name="TCP4OpenFail">0</counter>
+      <counter name="TCP6OpenFail">0</counter>
+      <counter name="UnixOpenFail">0</counter>
+      <counter name="RawOpenFail">0</counter>
+      <counter name="UDP4Close">94997</counter>
+      <counter name="UDP6Close">71</counter>
+      <counter name="TCP4Close">41672</counter>
+      <counter name="TCP6Close">0</counter>
+      <counter name="UnixClose">0</counter>
+      <counter name="FDWatchClose">0</counter>
+      <counter name="RawClose">0</counter>
+      <counter name="UDP4BindFail">2</counter>
+      <counter name="UDP6BindFail">0</counter>
+      <counter name="TCP4BindFail">0</counter>
+      <counter name="TCP6BindFail">0</counter>
+      <counter name="UnixBindFail">0</counter>
+      <counter name="FdwatchBindFail">0</counter>
+      <counter name="UDP4ConnFail">0</counter>
+      <counter name="UDP6ConnFail">71</counter>
+      <counter name="TCP4ConnFail">0</counter>
+      <counter name="TCP6ConnFail">0</counter>
+      <counter name="UnixConnFail">0</counter>
+      <counter name="FDwatchConnFail">0</counter>
+      <counter name="UDP4Conn">135</counter>
+      <counter name="UDP6Conn">0</counter>
+      <counter name="TCP4Conn">1040</counter>
+      <counter name="TCP6Conn">0</counter>
+      <counter name="UnixConn">0</counter>
+      <counter name="FDwatchConn">0</counter>
+      <counter name="TCP4AcceptFail">0</counter>
+      <counter name="TCP6AcceptFail">0</counter>
+      <counter name="UnixAcceptFail">0</counter>
+      <counter name="TCP4Accept">40633</counter>
+      <counter name="TCP6Accept">0</counter>
+      <counter name="UnixAccept">0</counter>
+      <counter name="UDP4SendErr">0</counter>
+      <counter name="UDP6SendErr">71</counter>
+      <counter name="TCP4SendErr">0</counter>
+      <counter name="TCP6SendErr">0</counter>
+      <counter name="UnixSendErr">0</counter>
+      <counter name="FDwatchSendErr">0</counter>
+      <counter name="UDP4RecvErr">0</counter>
+      <counter name="UDP6RecvErr">0</counter>
+      <counter name="TCP4RecvErr">0</counter>
+      <counter name="TCP6RecvErr">0</counter>
+      <counter name="UnixRecvErr">0</counter>
+      <counter name="FDwatchRecvErr">0</counter>
+      <counter name="RawRecvErr">0</counter>
+      <counter name="UDP4Active">4</counter>
+      <counter name="UDP6Active">2</counter>
+      <counter name="TCP4Active">40637</counter>
+      <counter name="TCP6Active">2</counter>
+      <counter name="UnixActive">0</counter>
+      <counter name="RawActive">1</counter>
+    </counters>
+  </server>
+  <views>
+    <view name="_default">
+      <zones>
+        <zone name="dal.moz.com" rdataclass="IN">
+          <serial>84</serial>
+        </zone>
+        <zone name="tuk.moz.com" rdataclass="IN">
+          <serial>5</serial>
+        </zone>
+      </zones>
+      <counters type="resqtype">
+        <counter name="A">72</counter>
+        <counter name="NS">63</counter>
+        <counter name="AAAA">107</counter>
+        <counter name="DNSKEY">73</counter>
+      </counters>
+      <counters type="resstats">
+        <counter name="Queryv4">238</counter>
+        <counter name="Queryv6">71</counter>
+        <counter name="Responsev4">238</counter>
+        <counter name="Responsev6">0</counter>
+        <counter name="NXDOMAIN">56</counter>
+        <counter name="SERVFAIL">0</counter>
+        <counter name="FORMERR">0</counter>
+        <counter name="OtherError">0</counter>
+        <counter name="EDNS0Fail">0</counter>
+        <counter name="Mismatch">0</counter>
+        <counter name="Truncated">103</counter>
+        <counter name="Lame">0</counter>
+        <counter name="Retry">174</counter>
+        <counter name="QueryAbort">0</counter>
+        <counter name="QuerySockFail">0</counter>
+        <counter name="QueryCurUDP">0</counter>
+        <counter name="QueryCurTCP">0</counter>
+        <counter name="QueryTimeout">0</counter>
+        <counter name="GlueFetchv4">28</counter>
+        <counter name="GlueFetchv6">60</counter>
+        <counter name="GlueFetchv4Fail">28</counter>
+        <counter name="GlueFetchv6Fail">28</counter>
+        <counter name="ValAttempt">26</counter>
+        <counter name="ValOk">26</counter>
+        <counter name="ValNegOk">0</counter>
+        <counter name="ValFail">0</counter>
+        <counter name="QryRTT10">6</counter>
+        <counter name="QryRTT100">146</counter>
+        <counter name="QryRTT500">86</counter>
+        <counter name="QryRTT800">0</counter>
+        <counter name="QryRTT1600">0</counter>
+        <counter name="QryRTT1600+">0</counter>
+        <counter name="NumFetch">0</counter>
+        <counter name="BucketSize">31</counter>
+        <counter name="REFUSED">0</counter>
+        <counter name="SitClientOut">0</counter>
+        <counter name="SitOut">0</counter>
+        <counter name="SitIn">0</counter>
+        <counter name="SitClientOk">0</counter>
+        <counter name="BadEDNSVersion">0</counter>
+        <counter name="ZoneQuota">0</counter>
+        <counter name="ServerQuota">0</counter>
+      </counters>
+      <cache name="_default">
+        <rrset>
+          <name>A</name>
+          <counter>13</counter>
+        </rrset>
+        <rrset>
+          <name>NS</name>
+          <counter>2</counter>
+        </rrset>
+        <rrset>
+          <name>AAAA</name>
+          <counter>2</counter>
+        </rrset>
+        <rrset>
+          <name>RRSIG</name>
+          <counter>2</counter>
+        </rrset>
+        <rrset>
+          <name>DNSKEY</name>
+          <counter>1</counter>
+        </rrset>
+      </cache>
+      <counters type="adbstat">
+        <counter name="nentries">1021</counter>
+        <counter name="entriescnt">26</counter>
+        <counter name="nnames">1021</counter>
+        <counter name="namescnt">27</counter>
+      </counters>
+      <counters type="cachestats">
+        <counter name="CacheHits">326473</counter>
+        <counter name="CacheMisses">179</counter>
+        <counter name="QueryHits">0</counter>
+        <counter name="QueryMisses">324970</counter>
+        <counter name="DeleteLRU">0</counter>
+        <counter name="DeleteTTL">0</counter>
+        <counter name="CacheNodes">29</counter>
+        <counter name="CacheBuckets">64</counter>
+        <counter name="TreeMemTotal">349472</counter>
+        <counter name="TreeMemInUse">37288</counter>
+        <counter name="TreeMemMax">53840</counter>
+        <counter name="HeapMemTotal">393216</counter>
+        <counter name="HeapMemInUse">132096</counter>
+        <counter name="HeapMemMax">132096</counter>
+      </counters>
+    </view>
+    <view name="_bind">
+      <zones>
+        <zone name="authors.bind" rdataclass="CH">
+          <serial>0</serial>
+        </zone>
+        <zone name="hostname.bind" rdataclass="CH">
+          <serial>0</serial>
+        </zone>
+        <zone name="version.bind" rdataclass="CH">
+          <serial>0</serial>
+        </zone>
+        <zone name="id.server" rdataclass="CH">
+          <serial>0</serial>
+        </zone>
+      </zones>
+      <counters type="resqtype" />
+      <counters type="resstats">
+        <counter name="Queryv4">0</counter>
+        <counter name="Queryv6">0</counter>
+        <counter name="Responsev4">0</counter>
+        <counter name="Responsev6">0</counter>
+        <counter name="NXDOMAIN">0</counter>
+        <counter name="SERVFAIL">0</counter>
+        <counter name="FORMERR">0</counter>
+        <counter name="OtherError">0</counter>
+        <counter name="EDNS0Fail">0</counter>
+        <counter name="Mismatch">0</counter>
+        <counter name="Truncated">0</counter>
+        <counter name="Lame">0</counter>
+        <counter name="Retry">0</counter>
+        <counter name="QueryAbort">0</counter>
+        <counter name="QuerySockFail">0</counter>
+        <counter name="QueryCurUDP">0</counter>
+        <counter name="QueryCurTCP">0</counter>
+        <counter name="QueryTimeout">0</counter>
+        <counter name="GlueFetchv4">0</counter>
+        <counter name="GlueFetchv6">0</counter>
+        <counter name="GlueFetchv4Fail">0</counter>
+        <counter name="GlueFetchv6Fail">0</counter>
+        <counter name="ValAttempt">0</counter>
+        <counter name="ValOk">0</counter>
+        <counter name="ValNegOk">0</counter>
+        <counter name="ValFail">0</counter>
+        <counter name="QryRTT10">0</counter>
+        <counter name="QryRTT100">0</counter>
+        <counter name="QryRTT500">0</counter>
+        <counter name="QryRTT800">0</counter>
+        <counter name="QryRTT1600">0</counter>
+        <counter name="QryRTT1600+">0</counter>
+        <counter name="NumFetch">0</counter>
+        <counter name="BucketSize">31</counter>
+        <counter name="REFUSED">0</counter>
+        <counter name="SitClientOut">0</counter>
+        <counter name="SitOut">0</counter>
+        <counter name="SitIn">0</counter>
+        <counter name="SitClientOk">0</counter>
+        <counter name="BadEDNSVersion">0</counter>
+        <counter name="ZoneQuota">0</counter>
+        <counter name="ServerQuota">0</counter>
+      </counters>
+      <cache name="_bind" />
+      <counters type="adbstat">
+        <counter name="nentries">1021</counter>
+        <counter name="entriescnt">0</counter>
+        <counter name="nnames">1021</counter>
+        <counter name="namescnt">0</counter>
+      </counters>
+      <counters type="cachestats">
+        <counter name="CacheHits">0</counter>
+        <counter name="CacheMisses">0</counter>
+        <counter name="QueryHits">0</counter>
+        <counter name="QueryMisses">0</counter>
+        <counter name="DeleteLRU">0</counter>
+        <counter name="DeleteTTL">0</counter>
+        <counter name="CacheNodes">0</counter>
+        <counter name="CacheBuckets">64</counter>
+        <counter name="TreeMemTotal">287392</counter>
+        <counter name="TreeMemInUse">29608</counter>
+        <counter name="TreeMemMax">29608</counter>
+        <counter name="HeapMemTotal">262144</counter>
+        <counter name="HeapMemInUse">1024</counter>
+        <counter name="HeapMemMax">1024</counter>
+      </counters>
+    </view>
+  </views>
+  <socketmgr>
+    <sockets>
+      <socket>
+        <id>0x7f79b1097010</id>
+        <references>1</references>
+        <type>not-initialized</type>
+        <local-address>&lt;unknown address, family 16&gt;</local-address>
+        <states>
+          <state>bound</state>
+        </states>
+      </socket>
+      <socket>
+        <id>0x7f79b1097268</id>
+        <references>1</references>
+        <type>tcp</type>
+        <local-address>127.0.0.1#8053</local-address>
+        <states>
+          <state>listener</state>
+          <state>bound</state>
+        </states>
+      </socket>
+      <socket>
+        <id>0x7f79b1097718</id>
+        <references>2</references>
+        <type>udp</type>
+        <local-address>::#53</local-address>
+        <states>
+          <state>bound</state>
+        </states>
+      </socket>
+      <socket>
+        <id>0x7f79a66aabc8</id>
+        <references>1</references>
+        <type>tcp</type>
+        <peer-address>127.0.0.1#36758</peer-address>
+        <local-address>127.0.0.1#8053</local-address>
+        <states>
+          <state>connected</state>
+          <state>bound</state>
+        </states>
+      </socket>
+    </sockets>
+  </socketmgr>
+  <taskmgr>
+    <thread-model>
+      <type>threaded</type>
+      <worker-threads>4</worker-threads>
+      <default-quantum>5</default-quantum>
+      <tasks-running>1</tasks-running>
+      <tasks-ready>0</tasks-ready>
+    </thread-model>
+    <tasks>
+      <task>
+        <name>server</name>
+        <references>11</references>
+        <id>0x7f79b1090010</id>
+        <state>idle</state>
+        <quantum>5</quantum>
+        <events>0</events>
+      </task>
+      <task>
+        <name>zmgr</name>
+        <references>5</references>
+        <id>0x7f79b10900d0</id>
+        <state>idle</state>
+        <quantum>1</quantum>
+        <events>0</events>
+      </task>
+      <task>
+        <name>zone</name>
+        <references>156</references>
+        <id>0x7f79b1090490</id>
+        <state>idle</state>
+        <quantum>2</quantum>
+        <events>0</events>
+      </task>
+      <task>
+        <references>1</references>
+        <id>0x7f79a6d2ec10</id>
+        <state>idle</state>
+        <quantum>5</quantum>
+        <events>0</events>
+      </task>
+      <task>
+        <name>ADB</name>
+        <references>1</references>
+        <id>0x7f79a6d2ecd0</id>
+        <state>idle</state>
+        <quantum>5</quantum>
+        <events>0</events>
+      </task>
+      <task>
+        <name>client</name>
+        <references>3</references>
+        <id>0x7f79b10ac010</id>
+        <state>idle</state>
+        <quantum>5</quantum>
+        <events>0</events>
+      </task>
+      <task>
+        <name>client</name>
+        <references>2</references>
+        <id>0x7f79a76ca550</id>
+        <state>idle</state>
+        <quantum>5</quantum>
+        <events>0</events>
+      </task>
+    </tasks>
+  </taskmgr>
+  <memory>
+    <contexts>
+      <context>
+        <id>0x558a9ea6ede0</id>
+        <name>main</name>
+        <references>206</references>
+        <total>6290637329</total>
+        <inuse>2511112</inuse>
+        <maxinuse>3586040</maxinuse>
+        <blocksize>3145728</blocksize>
+        <pools>75</pools>
+        <hiwater>0</hiwater>
+        <lowater>0</lowater>
+      </context>
+      <context>
+        <id>0x558a9ea96c80</id>
+        <name>dst</name>
+        <references>1</references>
+        <total>472749</total>
+        <inuse>102568</inuse>
+        <maxinuse>110592</maxinuse>
+        <blocksize>-</blocksize>
+        <pools>0</pools>
+        <hiwater>0</hiwater>
+        <lowater>0</lowater>
+      </context>
+      <context>
+        <id>0x558a9eac40e0</id>
+        <name>zonemgr-pool</name>
+        <references>3601</references>
+        <total>22391566</total>
+        <inuse>3176224</inuse>
+        <maxinuse>3199440</maxinuse>
+        <blocksize>2359296</blocksize>
+        <pools>0</pools>
+        <hiwater>0</hiwater>
+        <lowater>0</lowater>
+      </context>
+      <context>
+        <id>0x7f79a064c850</id>
+        <name>ADB</name>
+        <references>2</references>
+        <total>425504</total>
+        <inuse>165200</inuse>
+        <maxinuse>165200</maxinuse>
+        <blocksize>262144</blocksize>
+        <pools>7</pools>
+        <hiwater>0</hiwater>
+        <lowater>0</lowater>
+      </context>
+      <context>
+        <id>0x7f799806e240</id>
+        <name>client</name>
+        <references>3</references>
+        <total>291121006</total>
+        <inuse>10776</inuse>
+        <maxinuse>77753</maxinuse>
+        <blocksize>262144</blocksize>
+        <pools>2</pools>
+        <hiwater>0</hiwater>
+        <lowater>0</lowater>
+      </context>
+      <context>
+        <id>0x7f799c069660</id>
+        <name>client</name>
+        <references>3</references>
+        <total>179183810</total>
+        <inuse>10776</inuse>
+        <maxinuse>77753</maxinuse>
+        <blocksize>262144</blocksize>
+        <pools>2</pools>
+        <hiwater>0</hiwater>
+        <lowater>0</lowater>
+      </context>
+    </contexts>
+    <summary>
+      <TotalUse>7102523975</TotalUse>
+      <InUse>8917048</InUse>
+      <BlockSize>15466496</BlockSize>
+      <ContextSize>3730504</ContextSize>
+      <Lost>0</Lost>
+    </summary>
+  </memory>
+</statistics>
