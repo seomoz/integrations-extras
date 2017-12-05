@@ -8,3 +8,19 @@ instances:
    - host: localhost
      port: 26379
      additional_metrics: true
+     
+     # tags:
+     #   - optional_tag1
+     #   - optional_tag2
+     
+     # Optional user and password to connect to rethinkdb. Default is admin with empty password. 
+     # Before setting this field keep in mind that as of version 2.3, only the admin user can access System tables. 
+     # By default the admin user has no password. But, if password is set for admin user in cluster, update the below fields. 
+     # See https://rethinkdb.com/docs/permissions-and-accounts/ for details
+     # user: admin 
+     # password: 
+
+     # Optional SSL parameters, see https://rethinkdb.com/api/python/connect/ for more details
+     # ssl: False
+     # ssl_ca_certs: 
+     # auth_key:

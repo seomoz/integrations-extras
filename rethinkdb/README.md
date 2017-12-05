@@ -4,8 +4,9 @@
 
 Get metrics from rethinkdb service in real time to:
 
-* Visualize and monitor rethinkdb states
-* Be notified about rethinkdb failovers and events.
+* Visualize and monitor rethinkdb stats
+* Be notified about rethinkdb failures and events.
+* Monitor rethinkdb tables and databases stats by filtering them by tags (rethinkdb_table, rethinkdb_db)
 
 ## Installation
 
@@ -13,7 +14,7 @@ Install the `dd-check-rethinkdb` package manually or with your favorite configur
 
 ## Configuration
 
-Edit the `rethinkdb.yaml` file to point to your server and port, set the masters to monitor
+Edit the `rethinkdb.yaml` file to point to your server and port(add authentication details if required), set the masters to monitor
 
 ## Validation
 

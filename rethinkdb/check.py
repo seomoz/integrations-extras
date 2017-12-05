@@ -84,10 +84,19 @@ class RethinkdbCheck(AgentCheck):
         self.hostname = hostname.strip()
         port = instance.get('port')
         collect_extra = instance.get('additional_metrics',True)
+        username = instance.get('user', None)
+        password = instance.get('password', None)
+        is_ssl = instance.get('ssl', False)
+        ssl_ca_certs = instance.get('ssl_ca_certs', None)
+        auth_key = instance.get('auth_key', None)
         if not all([hostname,port]):
-            raise Exception('The Rethinkdb hostname and password must be specified in the configuration')
+            raise Exception('The Rethinkdb hostname and port must be specified in the configuration')
 
-        instance_tags = ["rethinkdb_instance:{0}-{1}".format(hostname, port)]
+        instance_tags = instance.get('tags', [])
+        # deduplicating the tags
+        instance_tags = list(set(instance_tags))
+
+        conn = self._get_connection(hostname, port, username, password, is_ssl, ssl_ca_certs, auth_key, instance_tags)
 
         #service check
         self.service_check(RETHINKDB_SERVICE_CHECK,
@@ -96,14 +105,36 @@ class RethinkdbCheck(AgentCheck):
             message='Connection to %s was successful' % hostname)
 
         # get and set metrics
-        self._get_rethinkdb_metrics(hostname, port, instance_tags, collect_extra)
+        self._get_rethinkdb_metrics(conn, instance_tags, collect_extra)
 
-    def _get_connection(self, hostname, port, instance_tags):
+    def _get_connection(self, hostname, port, username, password, is_ssl, ssl_ca_certs, auth_key, instance_tags):
         '''
         Get connection to rethinkdb
         '''
         try:
-            conn = r.connect(host = hostname, port = port)
+            if username and password:
+                self.log.debug('Connecting to host: %s using username and password' % hostname)
+                conn = r.connect(host = hostname,
+                                 port = port,
+                                 user = username,
+                                 password = password)
+            elif is_ssl:
+                if ssl_ca_certs and auth_key:
+                    self.log.debug('Connecting to host: %s using ssl cert and auth key' % hostname)
+                    conn = r.connect(host = hostname,
+                                     port = port,
+                                     auth_key = auth_key,
+                                     ssl= {'ca_certs': ssl_ca_certs})
+                elif ssl_ca_certs:
+                    self.log.debug('Connecting to host: %s using ssl cert' % hostname)
+                    conn = r.connect(host = hostname,
+                                     port = port,
+                                     ssl= {'ca_certs': ssl_ca_certs})
+                else:
+                    self.log.warn("Use SSL is true but no ssl ca certificate path provided. Trying to connect without it.")
+            else:
+                self.log.debug('Connecting to host: %s' % hostname)
+                conn = r.connect(host = hostname, port = port)
             return conn
 
         except Exception as e:
@@ -248,7 +279,7 @@ class RethinkdbCheck(AgentCheck):
                             self._set_metric(m_name, m_type, value, table_tags)
 
 
-    def _get_rethinkdb_metrics(self, hostname, port, instance_tags, collect_extra):
+    def _get_rethinkdb_metrics(self, conn, instance_tags, collect_extra):
         '''
         Get RethinkDB metrics from stats or table_config table
         '''
@@ -256,8 +287,7 @@ class RethinkdbCheck(AgentCheck):
         cluster_stats = {}
         table_server_stats = []
         table_config_stats = []
-            
-        conn = self._get_connection(hostname, port, instance_tags)
+
         cursor = r.db("rethinkdb").table("stats").run(conn)
         for stats in cursor:
             if 'id' in stats and 'cluster' in stats['id']:
