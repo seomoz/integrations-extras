@@ -1,0 +1,10 @@
+init_config:
+  # Any global configurable parameters should be added here
+
+instances:
+  #   The configuration for rethinkdb requires the hostname (not fqdn) and rethinkdb port.
+  #   By default the check collects additional cluster metrics (current issues, total servers, jobs running)
+  #   To collect only the basic cluster metrics set additional_metrics to false
+   - host: localhost
+     port: 26379
+     additional_metrics: true
